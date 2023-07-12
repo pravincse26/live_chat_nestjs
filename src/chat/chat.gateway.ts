@@ -8,7 +8,7 @@ import {
 @WebSocketGateway({ cors: true })
 export class ChatGateway implements OnGatewayConnection, OnGatewayDisconnect {
   @WebSocketServer() server;
-  users: number = 0;
+  users!: number = 0;
   async handleConnection() {
     // A client has connected
     this.users++;
